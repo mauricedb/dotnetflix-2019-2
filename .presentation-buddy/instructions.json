@@ -1,0 +1,273 @@
+[
+  {
+    "type": "openFile",
+    "path": "src/App.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 3
+  },
+  {
+    "type": "command",
+    "command": "editor.action.commentLine"
+  },
+  {
+    "type": "goto",
+    "line": 4
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "import Loading from \"./components/loading\";",
+      "",
+      "const Jokes = React.lazy(() => import(\"./components/jokes\"));",
+      ""
+    ]
+  },
+  {
+    "type": "goto",
+    "line": 1,
+    "column": 13
+  },
+  {
+    "type": "typeText",
+    "text": [", { Suspense }"]
+  },
+  {
+    "type": "goto",
+    "line": 12,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "     <Suspense fallback={<Loading />}>"]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "type": "wait",
+    "delay": "manual"
+  },
+
+  {
+    "type": "createFile",
+    "path": "src/components/jokes-resource.ts"
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "// import { unstable_createResource } from \"react-cache\";",
+      "import { unstable_createResource } from \"./react-cache.development\";",
+      "",
+      "const jokesResource = unstable_createResource(async (url: string) => {",
+      "  const rsp = await fetch(url);",
+      "  const jokes = await rsp.json();",
+      "",
+      "  return jokes;",
+      "});",
+      "",
+      "export default jokesResource;"
+    ]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "type": "wait",
+    "delay": "manual"
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.closeActiveEditor"
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/components/jokes.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 4
+  },
+  {
+    "type": "typeText",
+    "text": ["import jokesResource from \"./jokes-resource\";", ""]
+  },
+  {
+    "type": "goto",
+    "line": 2
+  },
+  {
+    "type": "command",
+    "command": "cursorDownSelect",
+    "repeat": 2
+  },
+  {
+    "type": "command",
+    "command": "editor.action.clipboardCutAction"
+  },
+  {
+    "type": "goto",
+    "line": 8
+  },
+  {
+    "type": "command",
+    "command": "cursorDownSelect",
+    "repeat": 5
+  },
+  {
+    "type": "command",
+    "command": "editor.action.clipboardCutAction"
+  },
+  {
+    "type": "typeText",
+    "text": ["  const jokes = jokesResource.read(url) as Joke[];", ""]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "type": "wait",
+    "delay": "manual"
+  },
+  {
+    "type": "openFile",
+    "path": "src/App.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 1,
+    "column": 25
+  },
+  {
+    "type": "typeText",
+    "text": [", StrictMode"]
+  },
+  {
+    "type": "goto",
+    "line": 12,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "   <StrictMode>"]
+  },
+  {
+    "type": "goto",
+    "line": 29,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "   </StrictMode>"]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "type": "wait",
+    "delay": "manual"
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/components/clock.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 11,
+    "column": 12
+  },
+  {
+    "type": "command",
+    "command": "editor.action.smartSelect.expand"
+  },
+  {
+    "type": "typeText",
+    "text": ["Did"]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "type": "wait",
+    "delay": "manual"
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/index.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 8
+  },
+  {
+    "type": "command",
+    "command": "editor.action.commentLine"
+  },
+  {
+    "type": "goto",
+    "line": 9
+  },
+  {
+    "type": "typeText",
+    "text": ["ReactDOM.unstable_createRoot(root).render(<App />);", ""]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "type": "wait",
+    "delay": "manual"
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/App.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 6
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "",
+      "import { unstable_scheduleCallback, unstable_NormalPriority } from \"scheduler\";",
+      ""
+    ]
+  },
+  {
+    "type": "goto",
+    "line": 24,
+    "column": 999
+  },
+  {
+    "type": "command",
+    "command": "editor.action.commentLine"
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "",
+      "                onChange={() => {",
+      "                  unstable_scheduleCallback(unstable_NormalPriority, () => ",
+      "                    setDisplayJokes(!displayJokes)",
+      "                  );",
+      "                }}",
+      ""
+    ]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  }
+]
