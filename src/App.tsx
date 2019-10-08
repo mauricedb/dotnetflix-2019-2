@@ -13,6 +13,7 @@ const App: React.FC = () => {
             type="checkbox"
             checked={displayJokes}
             onChange={() => setDisplayJokes(!displayJokes)}
+            autoFocus
           />
           Display jokes
         </label>

@@ -43,10 +43,24 @@
     "text": ["", "     <Suspense fallback={<Loading />}>"]
   },
   {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["", ""]
+  },
+  {
+    "type": "command",
+    "command": "editor.action.moveLinesDownAction",
+    "repeat": 20
+  },
+  {
     "type": "command",
     "command": "workbench.action.files.save"
   },
   {
+    "skip": true,
     "type": "wait",
     "delay": "manual"
   },
@@ -76,6 +90,7 @@
     "command": "workbench.action.files.save"
   },
   {
+    "skip": true,
     "type": "wait",
     "delay": "manual"
   },
@@ -131,6 +146,7 @@
     "command": "workbench.action.files.save"
   },
   {
+    "skip": true,
     "type": "wait",
     "delay": "manual"
   },
@@ -157,45 +173,24 @@
     "text": ["", "   <StrictMode>"]
   },
   {
-    "type": "goto",
-    "line": 29,
-    "column": 999
-  },
-  {
-    "type": "typeText",
-    "text": ["", "   </StrictMode>"]
-  },
-  {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
     "type": "wait",
-    "delay": "manual"
-  },
-
-  {
-    "type": "openFile",
-    "path": "src/components/clock.tsx"
-  },
-  {
-    "type": "goto",
-    "line": 11,
-    "column": 12
-  },
-  {
-    "type": "command",
-    "command": "editor.action.smartSelect.expand"
+    "delay": 250
   },
   {
     "type": "typeText",
-    "text": ["Did"]
+    "text": ["", ""]
+  },
+  {
+    "type": "command",
+    "command": "editor.action.moveLinesDownAction",
+    "repeat": 22
   },
   {
     "type": "command",
     "command": "workbench.action.files.save"
   },
   {
+    "skip": true,
     "type": "wait",
     "delay": "manual"
   },
@@ -225,6 +220,7 @@
     "command": "workbench.action.files.save"
   },
   {
+    "skip": true,
     "type": "wait",
     "delay": "manual"
   },
@@ -235,19 +231,19 @@
   },
   {
     "type": "goto",
-    "line": 6
+    "line": 5
   },
   {
     "type": "typeText",
     "text": [
       "",
-      "import { unstable_scheduleCallback, unstable_NormalPriority } from \"scheduler\";",
+      "import { unstable_next, unstable_scheduleCallback, unstable_NormalPriority } from \"scheduler\";",
       ""
     ]
   },
   {
     "type": "goto",
-    "line": 24,
+    "line": 22,
     "column": 999
   },
   {
@@ -259,9 +255,7 @@
     "text": [
       "",
       "                onChange={() => {",
-      "                  unstable_scheduleCallback(unstable_NormalPriority, () => ",
-      "                    setDisplayJokes(!displayJokes)",
-      "                  );",
+      "                  unstable_next(() => setDisplayJokes(!displayJokes));",
       "                }}",
       ""
     ]
