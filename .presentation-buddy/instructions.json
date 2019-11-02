@@ -213,7 +213,7 @@
   },
   {
     "type": "typeText",
-    "text": ["ReactDOM.unstable_createRoot(root).render(<App />);", ""]
+    "text": ["ReactDOM.createRoot(root!).render(<App />);", ""]
   },
   {
     "type": "command",
