@@ -56,13 +56,9 @@
     "repeat": 20
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -86,14 +82,11 @@
     ]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
+
   {
     "type": "command",
     "command": "workbench.action.closeActiveEditor"
@@ -142,14 +135,11 @@
     "text": ["  const jokes = jokesResource.read(url) as Joke[];", ""]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
+
   {
     "type": "openFile",
     "path": "src/App.tsx"
@@ -186,13 +176,9 @@
     "repeat": 22
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
@@ -216,13 +202,9 @@
     "text": ["ReactDOM.createRoot(root!).render(<App />);", ""]
   },
   {
-    "type": "command",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "skip": true,
     "type": "wait",
-    "delay": "manual"
+    "delay": "manual",
+    "save": true
   },
 
   {
